@@ -1,0 +1,23 @@
+## UI
++ Add handles; when switching back, compare to last calculated and recompute if needed.
+-(impossible because screen doesn't refresh during long running javascript) Computation progress in UI.
++ Handle control rotation/scale, too.
++ Menu to choose model to load (or enter a name).
++ Menu to choose texture to display (or enter a name).
++ Option to load gingerbread man with predefined handle positions.
++ Visualize skin weights (pixel shader or set vertex colors and use a white texture).
++ Automatically generate UV's if not present from the xy coordinates: http://stackoverflow.com/questions/20774648/three-js-generate-uv-coordinate
+
+## Performance
++ Fast mode (only equality constraints, stays sparse).
++ Cotangent weights.
+    - Boundary edges
+    - Voronoi/Mixed area
+- Port Alec's QP solver to JavaScript with emscripten.
+
+## HW
++ Handout
+- Test harness
+    - node.js server that you can paste code into and it will run tests comparing weights
+    + give them solution weights and matrices and let them compare to it
+        + a button in the GUI to save and load configurations (mesh path, texture path, handles, weights, and transforms from a JSON file)
