@@ -13,3 +13,11 @@ emcc -Wall -Werror --bind -I. -O2 --memory-init-file 0 -o curvelib.html CurveBri
 
 - I have developed all the functions first hand.
 
+Results:
+
+![catmullrom](https://user-images.githubusercontent.com/22354463/41386152-f8188716-6f4d-11e8-9fa0-72005b5a0d0f.PNG)
+
+![cubichermit](https://user-images.githubusercontent.com/22354463/41386155-fb3b613e-6f4d-11e8-85e0-c1f96e21e860.PNG)
+
+![cubicbeizerbernstein](https://user-images.githubusercontent.com/22354463/41386159-ff1b7b9a-6f4d-11e8-9325-f6d518c67da5.PNG)
+
