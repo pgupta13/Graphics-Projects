@@ -60,14 +60,6 @@ def laplacian_and_mass_matrices( faces, vertices ):
     are the indices of the three vertices that make up triangle f,
     return two N-by-N sparse matrices: Laplacian, Mass.
     '''
-    
-    ### 1 Create an N-by-N matrix A, where N is the number of vertices, that is initially zero.
-    ### 2 Iterate over all edges (i,j), setting a 1 at the corresponding (i,j) and (j,i) location in A.
-    ### 3 Create an N-by-N diagonal Mass matrix, where the i-th diagonal is the sum of the i-th row of A.
-    ### 4 The Laplacian matrix is inverse( Mass )*(Mass - A). In other words,
-    ###   it is (Mass-A) followed by dividing each row by its diagonal element.
-    
-    ### Add your code here.
 
     N = len(vertices)
 
@@ -122,14 +114,6 @@ def bbw( faces, vertices, handles, laplacian_mode, solver_mode ):
     all between 0 and 1.
     '''
     
-    ### 1 Create the laplacian L and mass M matrices.
-    ### 2 The bilaplacian B is L.T @ M @ L.
-    ### 3 Create the constraint matrix. There will be an equality constraint for
-    ###   every handle vertex, and 2 inequality constraints for the remaining vertices.
-    ### 4 Solve once for each handle, setting each handles constraint value to 1 in turn.
-    ### 5 Normalize each vertex's weights so that they sum to 1.
-    
-    ### Add your code here.
 
     import cvxopt
     L,M = laplacian_and_mass_matrices(faces,vertices)
